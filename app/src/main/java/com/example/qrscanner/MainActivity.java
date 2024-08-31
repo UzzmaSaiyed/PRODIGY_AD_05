@@ -1,6 +1,7 @@
 package com.example.qrscanner;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -11,6 +12,8 @@ import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 import com.journeyapps.barcodescanner.CaptureActivity;
 import com.journeyapps.barcodescanner.*;
+
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,8 +34,10 @@ public class MainActivity extends AppCompatActivity {
             integrator.setCameraId(0);  // Use a specific camera of the device
             integrator.setBeepEnabled(true);
             integrator.setBarcodeImageEnabled(true);
+            integrator.setCaptureActivity(CustomCaptureActivity.class);
             integrator.initiateScan();
         });
+
     }
 
     @Override
