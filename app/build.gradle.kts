@@ -37,7 +37,11 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(libs.support.annotations)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    add("implementation","com.google.zxing:core:3.4.1")
+    add("implementation", "com.journeyapps:zxing-android-embedded:4.2.0")
 }
